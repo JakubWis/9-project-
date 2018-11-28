@@ -1,7 +1,7 @@
 {
-  "name": "learning-git-2",
+  "name": "9-project-",
   "version": "1.0.0",
-  "description": "https://jakubwis.github.io/learning-git-2/",
+  "description": "https://jakubwis.github.io/9-project-/",
   "main": "index.js",
   "scripts": {
     "test": "npm-run-all test:*",
@@ -23,15 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JakubWis/learning-git-2.git"
+    "url": "git+https://github.com/JakubWis/9-project-.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JakubWis/learning-git-2/issues"
+    "url": "https://github.com/JakubWis/9-project-/issues"
   },
-  "homepage": "https://github.com/JakubWis/learning-git-2#readme",
+  "homepage": "https://github.com/JakubWis/9-project-#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
