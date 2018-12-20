@@ -126,6 +126,35 @@
 
 }
 
+.wBars{
+	position: relative;
+	.left-bar{
+		display: block;
+		width: 15px;
+		height: 9px;
+		background-color: $white;
+		position: absolute;
+		z-index: 3;
+	}
+	.right-bar{
+		display: block;
+		width: 19px;
+		height: 9px;
+		background-color: $white;
+		position: absolute;
+		left: 97.8%;
+		z-index: 3;
+	}
+}
+
+@media (max-width: $medium-screen){
+	.wBars{
+		.right-bar{
+			left: 96.5%;
+		}
+	}
+}
+
 @media  (max-width: $phone){
 	.postback{
 		.selectors{
@@ -153,6 +182,12 @@
 		}
 		.send{
 			justify-content: center;
+		}
+	}
+
+	.wBars{
+		.right-bar{
+			left: 94%;
 		}
 	}
 }

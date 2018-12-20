@@ -844,7 +844,9 @@ template {
   .general .part2 .data p {
     width: 100%; }
   .general .part2 .chart {
-    padding: 70px 0; } }
+    padding: 10px 0 30px 0;
+    height: 30%;
+    width: 77%; } }
 
 .links {
   display: none; }
@@ -1327,6 +1329,28 @@ template {
 .show {
   display: block; }
 
+.wBars {
+  position: relative; }
+  .wBars .left-bar {
+    display: block;
+    width: 15px;
+    height: 9px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 3; }
+  .wBars .right-bar {
+    display: block;
+    width: 19px;
+    height: 9px;
+    background-color: #fff;
+    position: absolute;
+    left: 97.8%;
+    z-index: 3; }
+
+@media (max-width: 1300px) {
+  .wBars .right-bar {
+    left: 96.5%; } }
+
 @media (max-width: 767px) {
   .postback .selectors {
     -ms-flex-direction: column;
@@ -1349,7 +1373,9 @@ template {
       text-align: center; }
   .postback .send {
     -ms-flex-pack: center;
-        justify-content: center; } }
+        justify-content: center; }
+  .wBars .right-bar {
+    left: 94%; } }
 
 /* Components */
 /*import "components/form_field";*/
