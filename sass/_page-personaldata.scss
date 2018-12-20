@@ -1,0 +1,52 @@
+.personal-data {
+	display: none;
+	.mainbox{
+		margin-bottom: 20px;
+		form{
+			padding-bottom: 40px;
+			.separate {
+				border-bottom: 1px solid $line;
+				.data {
+					label{
+						color: $section-text;
+						position: relative;
+						left: 30%;
+						font-weight: 700;
+					}
+					input{
+						height: 30px;
+						border-radius: 5px;
+						border-style: solid;
+						border-color: $line;
+						position: relative;
+						right: 5%;
+						padding-left: 10px;
+						&:focus{
+							border-color: $section-text;
+						}
+					}
+				}
+			}
+			.btn-orange{
+				display: block;
+				margin: 40px auto 0 auto;
+				padding: 10px 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: $phone) {
+.personal-data .mainbox form .separate .data{
+	label{
+	left: 0;			
+	text-align: center;
+	}
+ 	input{
+	right: 0;
+	display: block;
+	margin: 0 0 0 16.5%;
+	}
+}
+	
+}

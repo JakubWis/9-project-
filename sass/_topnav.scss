@@ -1,0 +1,80 @@
+.top-nav{
+  background-color: $white;
+  color: $section-text;
+  position: fixed;
+  top: 0;
+  width: 88%;
+  z-index: 5;
+  [class*='icon-']{
+  padding-right: 0px;
+  position: none;
+  top: 0;
+  }
+  ul{
+    display: flex;
+    justify-content: flex-end;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  li{
+    display: inline-block;
+  }
+  a{
+    padding: 20px 25px;
+    height: 60px;
+    border-left: 1px solid $line;
+    &:hover{
+      background-color: #e0e0e0;
+      border-left: 3px solid $orange;
+    }
+    span{
+      display: inline-block;
+    }
+    p{
+      display: inline-block;
+      margin: 0;
+    }
+    .icon-wallet{
+      padding-right: 15px;
+    }
+    .money{
+      font-size: 20px;
+      font-weight: 700;
+      color: $money-color;
+    }
+    .icon-arrow-down{
+      padding-left: 15px;
+    }
+    .new{
+        position: relative;
+        z-index: 2;
+        width: 10px;
+        height: 10px;
+        background-color: $orange;
+        border-radius: 50%;
+        bottom: 24px;
+        left: 10px;
+      }
+    .icon-profile{
+      padding-right: 15px;
+    }
+    .name{
+      color: $blue-link;
+    }
+  }
+}
+
+@media (max-width: $medium-screen){
+  .top-nav{
+    width: calc(100% - 145px);
+  }
+}
+
+@media (max-width: $phone){
+   nav{
+    display: none;
+   }
+}

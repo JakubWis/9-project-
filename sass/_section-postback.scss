@@ -1,0 +1,158 @@
+.postback{
+	display: none;
+	p{
+		color: $section-text;
+		font-weight: 700;
+	}
+	.selectors{
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		.part{
+			display: flex;
+			flex-direction: column;
+			width: 33%;
+			padding: 20px;
+			select{
+				border-color: $line;
+				border-radius: 4px;
+				padding: 10px;
+				color: $section-text;
+				margin-top: 20px;
+				&:focus{
+					color: black;
+				}
+			}
+		}
+	}
+	.boxes{
+		display: flex;
+		flex-direction: row;
+		border-top: 1px solid $line;
+		border-bottom: 1px solid $line;
+
+	}
+
+	.not{
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		padding: 20px 60px 20px 30px;
+		border-right: 1px solid $line;
+		.scroll{
+			margin-top: 30px;
+			height: 150px;
+			width: 100%;
+			overflow-y:scroll;
+			input{
+				display: block;
+				margin-left: 30px;	
+			}
+			label{
+				position: relative;
+				left: 60px;
+				bottom: 15px;
+			}
+
+		}
+	}
+	.howmuch{
+		padding: 20px 60px;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		.after{
+			padding-bottom: 30px;
+		}
+		.min{
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			top: 15px;
+		}
+		.max{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			position: relative;
+			bottom: 3px;
+		}
+		input {
+		    background: linear-gradient(to right, $orange 0%, $orange 50%, #dddddd 50%, #dddddd 100%);
+		    height: 7px;
+		    width: 100%;
+		    outline: none; 
+		    transition: background 450ms ease-in;
+		    -webkit-appearance: none;
+		  }
+		  
+		input::-webkit-slider-thumb {
+		    width: 0;
+		height: 0;
+		border: 0 solid transparent;
+		border-right-width: 16px;
+		border-left-width: 16px;
+		border-bottom: 22px solid $orange;
+		margin-top: 30px;
+		-webkit-appearance: none;
+	    }
+	    output{
+	    	display: flex;
+	    	flex-direction: column;
+	    	width: 20px;
+	    	margin: 40px auto;
+
+	    }
+	    .hours{
+	    	display: block;
+	    	width: 40px;
+	    	margin: 0 auto;
+	    	position: relative;
+	    	bottom: 58px; 
+	    	left: 45px;
+	    }
+	}
+	.send{
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		padding: 20px;
+
+	}
+}
+
+.show {
+	display: block;
+
+}
+
+@media  (max-width: $phone){
+	.postback{
+		.selectors{
+			   flex-direction: column;
+			.part{
+				width: 100%;
+				text-align: center;
+				padding: 20px 15%;
+			}
+		}
+		.boxes{
+			flex-direction: column;
+		}
+		.not{
+			width: 100%;
+			padding: 20px 10%;
+			border-bottom: 1px solid $line;
+		}
+		.howmuch{
+			width: 100%;
+			padding: 20px 10%;
+			.after{
+				text-align: center;
+			}
+		}
+		.send{
+			justify-content: center;
+		}
+	}
+}

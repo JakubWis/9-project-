@@ -1,0 +1,136 @@
+.general {
+  display: none;
+  .part1{
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    .date{
+    display: inline-block;
+    padding: 10px 0;
+    border: 1px solid $line;   
+    width: 300px;
+    margin: 40px 0;
+
+      .since{
+        display: inline-block;
+        padding: 0 40px 0 10px;
+      }
+
+      .to{
+        display: inline-block;
+        border-left: 1px solid $line;
+        padding: 0 10px;
+        .icon-calendar{
+          font-size: 15px;
+          margin-left: 40px;
+        }
+      }
+  }
+  .btn-orange{
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top: 5px;
+  }
+}
+.part2{
+  border-top: 1px solid $line;
+  .data{
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 0;
+    p{
+      display: inline-block;
+      width: 47%;
+      margin: 5px 1%;
+      border-bottom: 1px solid $line;
+      padding: 0.5% 0 0.5% 0.5%;
+      font-weight: 700;
+      color: $section-text;
+      .number{
+        color: $black;
+        position: relative;
+        float: right;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+      &:last-child{
+        border: none;
+        padding-top: 70px;
+      }
+    }
+  }
+
+  .chart{
+    display: block;
+    width: 65%;
+    height: 65%;
+    margin: 0 auto;
+    padding: 10px 0 50px 0;
+  }
+}
+}
+
+
+@media (max-width: $medium-screen){
+  .general{
+    .part2{
+        .data{
+          width: 80%;
+          p{
+            width: 41%;
+            margin: 5px 4%;
+          }
+        }
+        .chart{
+          padding: 0;
+          width: 60%;
+        }
+      }
+  }
+}
+
+@media (max-width: $phone) {
+  .general{
+    .part1{
+      margin: 0;
+      width: 100%;
+      .date{
+        display: block;
+        margin: 40px auto 10px auto;
+        width: 250px;
+        .since{
+          padding: 0 0 0 10px;
+        }
+        .to{
+          padding: 0 0 0 10px;
+          .icon-calendar{
+            margin-left: 20px;
+          }
+        }
+      }
+      .btn-orange{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+        top: 0px
+      }
+    }
+    .part2{
+      .data{
+        p{
+          width: 100%;
+        }
+      }
+      .chart{
+        padding: 70px 0;
+      }
+    } 
+  }
+}
+
+

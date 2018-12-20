@@ -3,6 +3,16 @@
 @import "normalize";
 @import "layout";
 @import "sidebar";
+@import "topnav";
+@import "mainbox";
+@import "btnorange";
+@import "section-general";
+@import "section-links";
+@import "page-personaldata";
+@import "page-payout";
+@import "popup";
+@import "o-dark";
+@import "section-postback";
 
 /* Components */
 /*import "components/form_field";*/
@@ -12,3 +22,55 @@
 
 /* Pages / Views */
 /*import "pages/registration";*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+body{
+	padding-left: 12%;
+    padding-top: 80px;
+	font-family: 'Roboto', sans-serif;
+	background-color: $site-background;
+}
+@media (max-width: $medium-screen) {
+    body{
+     	padding-left: 145px;
+    }
+}
+
+@media (max-width: $phone) {
+    body{
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
+
+[class*='icon-']{
+  font-size: 20px;
+}
+
+.show{
+    display: block;
+}

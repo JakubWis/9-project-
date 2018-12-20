@@ -1,0 +1,65 @@
+.links{
+  display: none;
+  .mainbox{
+    margin: 20px 2% 20px 2%;
+    padding-bottom: 50px;
+    .btn-orange{
+      margin: 50px auto;
+    }
+    ul{
+      li{
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        border-top: 1px solid $line;
+        &:hover{
+          background-color: $section-hover;
+        }
+        &:last-of-type {
+          border-bottom: 1px solid $line;
+        }
+        .name{
+          color: $section-text;
+          font-weight: 700;  
+        }
+        .link{
+          text-align: left;
+          color: $blue-link;
+          position: relative;
+          left: 40px;
+        }
+        [class*='icon-']{
+            color: $section-text;
+            margin-left: 30px;
+            position: relative;
+            left: 40%;
+            cursor: pointer;
+            &:hover{
+              color: $orange;
+            };
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $phone){
+  .links{
+    .mainbox{
+      padding-bottom: 10px;
+      ul{
+        li{
+          width: 80%;
+          .link{
+            left: 0;
+            word-wrap: break-word;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

@@ -1,0 +1,12 @@
+.btn-orange{
+	background-color: $orange;
+	border: none;
+	border-radius: 3px;
+	padding: 12px;
+	color: white;
+	cursor: pointer;
+	display: block;
+	&:hover{
+		background-color: $orange-hover;
+	}
+}

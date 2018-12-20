@@ -1,0 +1,41 @@
+/* grid */
+
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class *= "col-"] {
+	float:left;
+	width: 100%;
+	padding: 20px 0px;
+}
+
+@media (max-width: 767px){
+    /* For tablets: */
+    @for $i from 1 through 12 {
+		.col-s-#{$i} {
+    		width: percentage($i / 12);
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+	/*for tablets*/
+    @for $i from 1 through 12 {
+		.col-t-#{$i} {
+    		width: percentage($i / 12);
+		}
+	}
+}
+
+@media (min-width: 1300px) {
+    /* For desktop: */
+    @for $i from 1 through 12 {
+		.col-m-#{$i} {
+    		width: percentage($i / 12);
+		}
+	}
+}

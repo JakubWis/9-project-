@@ -1,0 +1,25 @@
+.mainbox{
+  margin: 0px 2% 20px 2%;
+  width: 96%;
+  background-color: $white;
+  h1{
+    font-size: 18px;
+    font-weight: 400;
+    color: $section-text;
+    text-transform: uppercase;
+    padding: 10px;
+    border-bottom: 1px solid $line;
+    margin-top: 0;
+    span{
+      position: absolute;
+      right: 3%;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: $phone){
+  .mainbox{
+    margin-top: 2%;
+  }
+}

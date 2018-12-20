@@ -1,0 +1,186 @@
+.payout{
+  display: none;
+  .mainbox{
+    margin-bottom: 20px;
+    .part1{
+      display: block;
+      width: 400px;
+      margin: 0 auto;
+      .date{
+      display: inline-block;
+      padding: 10px 0;
+      border: 1px solid $line;
+      margin: 40px 0;
+      width: 300px;
+        .since{
+          display: inline-block;
+          padding: 0 40px 0 10px;
+        }
+
+        .to{
+          display: inline-block;
+          border-left: 1px solid $line;
+          padding: 0 10px;
+          .icon-calendar{
+            font-size: 15px;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+    .btn-orange{
+      display: inline-block;
+      margin-left: 20px;
+      position: relative;
+      top: 5px;
+    }
+    .part2 {
+      border-top: 1px solid $line;
+      padding: 40px 0 40px 0;
+      ul{
+        padding:0 40px;
+        .first{
+          color: $section-text;
+          font-weight: 700;
+          .btn{
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 3px;
+            &:hover{
+              background-color: $section-hover;
+            }
+          }
+        }
+        .icon-arrow-up{
+          font-size: 13px;
+          padding-left: 10px;
+          position: relative;
+          top: 2px;
+        }
+        li{
+          border-bottom: 1px solid $line;
+          padding: 5px 20px;
+          &:hover{
+            background-color: $section-hover;
+            &:first-of-type{
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+    .part3{
+      .site-number{
+        float: none;
+        margin: 0 auto;
+        width: 437px;
+        span{
+          display: inline-block;
+          color: $section-text;
+          position: relative;
+          top: 3px;
+          cursor: pointer;
+        }
+        ul{
+          display: inline-block;
+          li{
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: $blue-link;
+            &:hover{
+              background-color: $section-hover;
+              cursor: pointer;
+              color: $section-text;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
+@media (max-width: $medium-screen){
+  .payout{
+    .mainbox{
+      .part3{
+          .site-number{
+              float: none;
+              margin: 0 auto;
+          }
+      }
+    }
+  }    
+}
+
+@media (max-width: $phone) {
+  .payout{
+    .mainbox{
+      .part1{
+        margin: 0;
+        width: 100%;
+        .date{
+          display: block;
+          margin: 40px auto 10px auto;
+          width: 250px;
+          .since{
+            padding: 0 0 0 10px;
+          }
+          .to{
+            padding: 0 0 0 10px;
+            .icon-calendar{
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .btn-orange{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+        top: 0px
+      }
+      .part2{
+          .first{
+            display: none;
+          }
+          ul{
+            padding: 0;
+            li{
+              p{
+                display: block;
+                float: none;
+                margin: 0 auto;
+                width: 100px;
+                padding-left: 20%;
+                &:before{
+                   white-space: nowrap;
+                   background-color: #f7f7f7;
+                   position: absolute; left: 10%;
+                }
+                &:nth-of-type(1) { }
+                &:nth-of-type(1):before { content: "Date";   }
+                &:nth-of-type(2):before { content: "Amount ($)"; }
+                &:nth-of-type(3):before { content: "Deal"; }
+                &:nth-of-type(4):before { content: "Account";}
+              }
+            }
+          }
+      }
+      .part3{
+          .site-number{
+            display: block;
+            margin: 0 auto;
+            float: none;
+            width: 255px;
+            ul{
+              li{
+                padding: 10px 5px;
+              }
+            }
+          }
+        }
+    }
+  }  
+}

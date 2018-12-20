@@ -16,10 +16,10 @@
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
-    "watch:sassprefixer": "onchange -d 100 css/style.css -- npm-run-all -s watch:sass watch:autoprefixer",
-    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
-    "watch:autoprefixer": "autoprefixer-cli -o css/style.prefixed.css css/style.css",
-    "watch:browsersync": "globstar browser-sync start --server --files css/*.css *.html"
+    "watch:browser-sync": "browser-sync start --server --files css/style.css index.html",
+    "sassprefixer-sass": "node-sass sass/style.scss css/style.css",
+    "sassprefixer-autoprefixer": "autoprefixer-cli css/style.css",
+    "watch:sassprefixer": "onchange sass -- npm-run-all sassprefixer-sass sassprefixer-autoprefixer"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "onchange": "^5.1.1"
   },
   "dependencies": {
+    "chart.js": "^2.7.3",
     "mkdirp": "^0.5.1",
     "npm-run-all": "^4.1.3"
   }
