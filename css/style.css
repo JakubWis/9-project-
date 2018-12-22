@@ -523,7 +523,10 @@ template {
     padding: 20px;
     font-size: 28px; }
   .sidebar .side-btn {
-    padding: 10px 0px 10px 20px; }
+    padding: 10px 0px 10px 20px;
+    cursor: pointer;
+    display: block;
+    position: relative; }
     .sidebar .side-btn:hover {
       color: #fff;
       background-color: #282828;
@@ -537,7 +540,8 @@ template {
     margin: 20px 0; }
   .sidebar .manager .your {
     padding-left: 20px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    font-size: 18px; }
   .sidebar .manager .name {
     display: block;
     padding-left: 20px; }
@@ -581,7 +585,8 @@ template {
       font-size: 23px; }
     .sidebar .manager .your {
       padding: 0;
-      text-align: center; }
+      text-align: center;
+      font-size: 16px; }
     .sidebar .manager .name {
       padding-top: 5px;
       padding-left: 0; }
@@ -597,7 +602,7 @@ template {
         bottom: 63px; }
     .sidebar .move {
       position: relative;
-      left: 30px; } }
+      left: 34px; } }
 
 @media (max-width: 767px) {
   .sidebar {
@@ -733,6 +738,7 @@ template {
     border-bottom: 1px solid #e3e3e3;
     margin-top: 0; }
     .mainbox h1 span {
+      display: none;
       position: absolute;
       right: 3%;
       cursor: pointer; }

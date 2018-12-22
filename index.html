@@ -21,16 +21,37 @@
 	<section class="sidebar">
 		<span class="logo">Just do it!</span>
 		  	<ul class="make-space">
-		    	<li class="side-btn ge"><a href="#"><span class="icon-general"></span> Genral</a></li>
-		      	<li class="side-btn de"><a href="#"><span class="icon-details"></span> Details</a></li>
-			    <li class="side-btn li"><a href="#"><span class="icon-links"></span> Links</a></li>
-			    <li class="side-btn ba"><a href="#"><span class="icon-banners"></span> Banners</a></li>
-			    <li class="side-btn pe"><a href="#"><span class="icon-personaldata"></span> Personal <span class="move">data</span></a></li>
-			    <li class="side-btn pa"><a href="#"><span class="icon-payout"></span> Payout</a></li>
-			    <li class="side-btn po"><a href="#"><span class="icon-postback"></span> Postback</a></li>  
+		    	<li class="side-btn sb" data-section="general">
+		    		<span class="icon-general sb" data-section="general"></span> 
+		    		General
+		    	</li>
+		      	<li class="side-btn sb" data-section="details">
+		      		<span class="icon-details sb" data-section="details"></span>
+		      		Details
+		      	</li>
+			    <li class="side-btn sb" data-section="links">
+			    	<span class="icon-links sb" data-section="links"></span>
+			    	Links
+			    </li>
+			    <li class="side-btn sb" data-section="baners">
+			    	<span class="icon-banners sb" data-section="baners"></span>
+			    	Banners</li>
+			    <li class="side-btn sb" data-section="personal-data">
+			    	<span class="icon-personaldata sb" data-section="personal-data"></span>
+			    	Personal 
+			    	<span class="move">data</span>
+			    </li>
+			    <li class="side-btn sb" data-section="payout">
+			    	<span class="icon-payout sb" data-section="payout"></span>
+			    	Payout
+			    </li>
+			    <li class="side-btn sb" data-section="postback">
+			    	<span class="icon-postback sb" data-section="postback"></span>
+			    	Postback
+			    </li>  
 		    </ul>
 		    <div class="manager">
-				<p class="your">YOUR MANAGER</p>
+				<h2 class="your">YOUR MANAGER</h2>
 				<a href="#popup1" class="name">
 					<img src="https://images.pexels.com/photos/450214/pexels-photo-450214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
 					<p>Mikhael E.</p>
@@ -130,9 +151,9 @@
 
 	<!--GENERAL-->
 
-	<section class="general">
+	<section class="general show">
 		<div class="mainbox">
-			<h1>Genral statistics <span class="close" data-section="general">X</span></h1>
+			<h1>General statistics <span class="close" data-section="general">X</span></h1>
 			<div class="part1">
 				<div class="date">
 					<div class="since"> 16.05.2016</div>

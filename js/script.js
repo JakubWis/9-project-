@@ -8,6 +8,31 @@ function showSection(sectionName) {
 	document.querySelector('.'+sectionName).classList.toggle('show')
 }
 
+function sideBarAction(selector){
+    document.querySelector('.'+selector).addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleMenu()
+  });
+}
+sideBarAction("burger")
+sideBarAction("o-dark")
+
+
+
+let lastClicked = 'general'
+const sBtn = document.querySelectorAll('.sb')
+
+for(let i = 0; i < sBtn.length; i++){
+  sBtn[i].addEventListener('click', function(event){
+    showSection(event.target.dataset.section)
+    showSection(lastClicked)
+    lastClicked = event.target.dataset.section
+    console.log(event.target.dataset.section)
+  })
+}
+
+/* Did not need x closer at the end :)
+
 const x = document.querySelectorAll('.close')
 
 for(let i = 0; i < x.length; i++){
@@ -16,44 +41,4 @@ for(let i = 0; i < x.length; i++){
   })
 }
 
-/////////////////////////////////////////////////////////////////////////
-
-document.querySelector('.burger').addEventListener('click', function(e) {
-  e.preventDefault();
-  toggleMenu()
-});
-
-document.querySelector('.o-dark').addEventListener('click', function(e) {
-  e.preventDefault();
-  toggleMenu()
-});
-
-document.querySelector('.ge').addEventListener('click', function(e) {
-  e.preventDefault();
-  showSection('general')
-});
-
-document.querySelector('.li').addEventListener('click', function(e) {
-  e.preventDefault();
-  showSection('links')
-});
-
-document.querySelector('.ba').addEventListener('click', function(e) {
-  e.preventDefault();
-  showSection('baners')
-});
-
-document.querySelector('.pe').addEventListener('click', function(e) {
-  e.preventDefault();
-  showSection('personal-data')
-});
-
-document.querySelector('.pa').addEventListener('click', function(e) {
-  e.preventDefault();
-  showSection('payout')
-});
-
-document.querySelector('.po').addEventListener('click', function(e) {
-  e.preventDefault();
-  showSection('postback')
-});
+*/
